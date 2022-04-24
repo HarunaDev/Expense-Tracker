@@ -27,6 +27,10 @@ function addExpenses(event){
     const cell3 = row.insertCell(2)
     const cell4 = row.insertCell(3)
     
+    // insert input values to table
+    cell1.innerHTML = expenseName
+    cell2.innerHTML = expenseAmount
+    cell3.innerHTML = expenseDate
 }
 
 function deleteButton(e){
