@@ -31,6 +31,12 @@ function addExpenses(event){
     cell1.innerHTML = expenseName.value
     cell2.innerHTML = expenseAmount.value
     cell3.innerHTML = expenseDate.value
+
+    // create delete button and add to table
+    const deleteBtn = document.createElement("button")
+    deleteBtn.innerHTML = `Delete`
+    deleteBtn.classList.add("delete-btn")
+    row.appendChild(deleteBtn)
 }
 
 function deleteButton(e){
