@@ -44,6 +44,13 @@ function addExpenses(event){
     expenseDate.value = ""
 }
 
+// delete button function
 function deleteButton(e){
+    const item = e.target
+
+    if(item.classList[0] === "delete-btn"){
+        const deleteRow = item.parentElement
+        deleteRow.remove()
+    }
 
 }
