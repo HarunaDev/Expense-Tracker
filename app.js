@@ -2,28 +2,26 @@
 const expenseName = document.getElementById("expense-name")
 const expenseAmount = document.getElementById("expense-amount")
 const expenseDate = document.getElementById("expense-date")
-const saveExpense = document.getElementById("save-input")
-const expenseTable = document.getElementById("Expenses")
+const expenseTable = document.getElementById("expenses")
 const expenseRow = document.getElementById("expense-row")
+const saveExpenses = document.getElementById("save-expenses")
 
 // Event Listeners
-saveExpense.addEventListener("click", addExpense)
+saveExpenses.addEventListener("click", addExpenses)
 expenseTable.addEventListener("click", deleteButton)
 
 // -Functions
 
 // add expense function 
-function addExpense(){
-    // check if user submits an empty field
-    if(expenseName.value === "" || expenseAmount.value === "" || expenseDate.value === "") {
-        return alert("fill all fields")
-    } else {
-
+function addExpenses(event){
+    // check if user submitted empty fields 
+    if (expenseName.value  === "" || expenseAmount.value  === "" || expenseDate.value  === ""){
+        return alert("fill all fields");
     }
 
     
-    
 }
 
-//  dlete button function
-function deleteButton(){}
+function deleteButton(e){
+
+}
