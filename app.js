@@ -14,6 +14,13 @@ expenseTable.addEventListener("click", deleteButton)
 
 // add expense function 
 function addExpense(){
+    // check if user submits an empty field
+    if(expenseName.value === "" || expenseAmount.value === "" || expenseDate.value === "") {
+        return alert("fill all fields")
+    } else {
+
+    }
+
     
     
 }
