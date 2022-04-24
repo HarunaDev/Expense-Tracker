@@ -37,6 +37,11 @@ function addExpenses(event){
     deleteBtn.innerHTML = `Delete`
     deleteBtn.classList.add("delete-btn")
     row.appendChild(deleteBtn)
+
+    // clear field after submitting 
+    expenseName.value = ""
+    expenseAmount.value = ""
+    expenseDate.value = ""
 }
 
 function deleteButton(e){
