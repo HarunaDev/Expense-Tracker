@@ -32,6 +32,12 @@ function addExpenses(event){
     cell2.innerHTML = expenseAmount.value
     cell3.innerHTML = expenseDate.value
 
+    // create object
+    const localItems = [expenseName.value, expenseAmount.value, expenseDate.value]
+
+      // add items to local storage
+      saveExpenseItems(localItems)
+
     // create delete button and add to table
     const deleteBtn = document.createElement("button")
     deleteBtn.innerHTML = `Delete`
@@ -53,4 +59,19 @@ function deleteButton(e){
         deleteRow.remove()
     }
 
+}
+
+// save items to local storage 
+function saveExpenseItems(items) {
+    // check local storage for items
+    let expenseItems
+    if(localStorage.getItem("expenseItems") === null){
+        expenseItems = []
+    }else{
+        expenseItems = JSON.parse(localStorage.getItem("expenseItems"))
+    }
+
+    // push expense items to local storage
+    expenseItems.push(items)
+    localStorage.setItem("expenseItems", JSON.stringify(expenseItems))
 }
