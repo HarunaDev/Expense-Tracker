@@ -7,6 +7,7 @@ const expenseRow = document.getElementById("expense-row")
 const saveExpenses = document.getElementById("save-expenses")
 
 // Event Listeners
+document.addEventListener("DOMContentLoaded", getExpenseItems)
 saveExpenses.addEventListener("click", addExpenses)
 expenseTable.addEventListener("click", deleteButton)
 
@@ -74,4 +75,15 @@ function saveExpenseItems(items) {
     // push expense items to local storage
     expenseItems.push(items)
     localStorage.setItem("expenseItems", JSON.stringify(expenseItems))
+}
+
+// get expense items from local storage
+function getExpenseItems(){
+    // check local storage for items
+    let expenseItems 
+    if(localStorage.getItem("expenseItems") === null){
+        expenseItems = []
+    }else{
+        expenseItems = JSON.parse(localStorage.getItem("expenseItems"))
+    }
 }
