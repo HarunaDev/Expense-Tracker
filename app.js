@@ -86,4 +86,26 @@ function getExpenseItems(){
     }else{
         expenseItems = JSON.parse(localStorage.getItem("expenseItems"))
     }
+
+    // loop through each expense item
+    expenseItems.forEach(function(item){
+        // assign cells to table
+        let i = 1
+        const row = expenses.insertRow(i)
+        const cell1 = row.insertCell(0)
+        const cell2 = row.insertCell(1)
+        const cell3 = row.insertCell(2)
+        const cell4 = row.insertCell(3)
+    
+        // insert local storage items to cells in table
+        cell1.innerHTML = item[0]
+        cell2.innerHTML = item[1]
+        cell3.innerHTML = item[2]
+
+        // create delete button and add to table
+        const deleteBtn = document.createElement("button")
+        deleteBtn.innerHTML = `Delete`
+        deleteBtn.classList.add("delete-btn")
+        row.appendChild(deleteBtn)
+    })
 }
