@@ -57,6 +57,7 @@ function deleteButton(e){
 
     if(item.classList[0] === "delete-btn"){
         const deleteRow = item.parentElement
+        deleteExpenseItems(deleteRow)
         deleteRow.remove()
     }
 
@@ -88,7 +89,7 @@ function getExpenseItems(){
     }
 
     // loop through each expense item
-    expenseItems.forEach(function(item){
+    expenseItems.forEach(function(items){
         // assign cells to table
         let i = 1
         const row = expenses.insertRow(i)
@@ -98,9 +99,9 @@ function getExpenseItems(){
         const cell4 = row.insertCell(3)
     
         // insert local storage items to cells in table
-        cell1.innerHTML = item[0]
-        cell2.innerHTML = item[1]
-        cell3.innerHTML = item[2]
+        cell1.innerHTML = items[0]
+        cell2.innerHTML = items[1]
+        cell3.innerHTML = items[2]
 
         // create delete button and add to table
         const deleteBtn = document.createElement("button")
@@ -108,4 +109,20 @@ function getExpenseItems(){
         deleteBtn.classList.add("delete-btn")
         row.appendChild(deleteBtn)
     })
+}
+
+// delete items from local storage 
+function deleteExpenseItems(items) {
+    // check local storage for expense items
+    let item
+    if(localStorage.getItem("expenseItems") === null){
+        expenseItems = []
+    }else{
+        expenseItems = JSON.parse(localStorage.getItem("expenseItems"))
+    }
+
+    const expenseIndex = items.children[0].innerText 
+    expenseItems.splice(expenseItems.indexOf(expenseIndex), 1)
+
+    localStorage.setItem("expenseItems", JSON.stringify(expenseItems))
 }
