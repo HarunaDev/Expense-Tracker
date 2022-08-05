@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 100%;
+  max-height: 100%;
+  padding: 40px 50px 0;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#ExpenseBox {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 50px;
+  border: 2px solid #333 ;
+  padding: 50px;
+}
+
+#ExpenseBox input {
+  width: 250px;
+  height: 50px;
+  padding: 10px;
+  font-size: 18px;
+  border: 2px solid #444;
+  border-radius: 5px;
+}
+
+#ExpenseBox #save-expenses {
+  padding: 15px 20px;
+  border: 2px solid #444;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #555;
+} 
+
+table {
+  width: 100%;
+  
+}
+
+table, th, td{
+  padding: 10px 5px;
+  text-align: center;
+  font-size: 18px;
+}
+
+table, th{
+  border: 1px solid;
+}
+
+td {
+  position: relative;
+}
+
+.none {
+  display: none;
+}
+
+.delete-btn {
+  padding: 5px;
+  border: 1px solid #444;
+  border-radius: 5px;
+}
