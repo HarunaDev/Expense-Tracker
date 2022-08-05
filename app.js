@@ -1,4 +1,4 @@
-// Grab Elements
+// DOM Elements
 const expenseName = document.getElementById("expense-name")
 const expenseAmount = document.getElementById("expense-amount")
 const expenseDate = document.getElementById("expense-date")
@@ -14,12 +14,12 @@ expenseTable.addEventListener("click", deleteButton)
 // -Functions
 
 // add expense function 
-function addExpenses(event){
+function addExpenses(event) {
     // check if user submitted empty fields 
     if (expenseName.value  === "" || expenseAmount.value  === "" || expenseDate.value  === ""){
         return alert("fill all fields");
     }
-
+    
     // assign cells to table
     let i = 1
     const row = expenses.insertRow(i)
@@ -44,6 +44,7 @@ function addExpenses(event){
     deleteBtn.innerHTML = `Delete`
     deleteBtn.classList.add("delete-btn")
     row.appendChild(deleteBtn)
+    
 
     // clear field after submitting 
     expenseName.value = ""
@@ -60,7 +61,6 @@ function deleteButton(e){
         deleteExpenseItems(deleteRow)
         deleteRow.remove()
     }
-
 }
 
 // save items to local storage 
