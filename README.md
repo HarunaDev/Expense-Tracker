@@ -10,9 +10,9 @@ Go to live app [here](https://biz-tracker.netlify.app/) \
 Input expense details into all the fields and click on the Add button. \
 The details will be added and saved to a local storage, to avoid losing input data on page refresh.
 
-### **Contribution Guidelines**
+### **Contribution Guide**
 
-Your contributions are always welcome here, as long as you follow the guide [HERE]()
+Your contributions are welcome here. As long as you follow the contributing guide [HERE](https://github.com/HarunaDev/Expense-Tracker/blob/main/CONTRIBUTING.md)
 
 ### **Instructions**
 
@@ -23,4 +23,5 @@ Your contributions are always welcome here, as long as you follow the guide [HER
 - Commit and push
 - Create a pull request
 - Wait for pull request to merge
-- Don't forget to give a like ;)
+
+### **If you found this helpful, kindly give it a star ;)**
